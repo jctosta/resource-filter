@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bulma.css" />
+  <link rel="stylesheet" href="options.css" />
+</head>
+
+<body>
+  <section class="hero is-dark is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Resource Filter Extension
+        </h1>
+        <h2 class="subtitle">
+          Options Page
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <form id="options-form" class="container">
+      <div class="field">
+        <label class="label" for="search-method">Search Method</label>
+        <div class="control is-expanded">
+          <div class="select is-fullwidth">
+            <select id="search-method" name="search-method">
+              <option value="simple">Simple (String based - IndexOf)</option>
+              <option value="advanced">Advanced (Regex based - Search)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="search-pattern">Search Pattern ()</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" id="search-pattern" name="search-pattern" />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="search-tag">HTML Tag</label>
+        <div class="control is-expanded">
+          <div class="select is-fullwidth">
+            <select id="search-tag" name="search-tag">
+              <option value="a">Links - &lt;a&gt;&lt;/a&gt;</option>
+              <option value="img">Images - &lt;img src=&quot;&quot;/&gt;</option>
+              <option value="audio">Audio - &lt;audio src=&quot;&quot;&gt;&lt;/audio&gt;</option>
+              <option value="video">Video - &lt;video src=&quot;&quot;&gt;&lt;/video&gt;</option>
+              <option value="track">Subtitle - &lt;track kind=&quot;subtitles&quot; src=&quot;&quot; /&gt;</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="list-separator">Separator</label>
+        <div class="control is-expanded">
+          <div class="select is-fullwidth">
+            <select id="list-separator" name="list-separator">
+              <option value="new-line">New Line (\n)</option>
+              <option value="semi-collon">Semi-collon (;)</option>
+              <option value="pipe">Pipe (|)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field is-grouped is-grouped-right">
+        <p class="control">
+          <input class="button is-primary" type="submit" value="Save">
+        </p>
+        <p class="control">
+          <input class="button is-light" type="reset" value="Reset">
+        </p>
+      </div>
+    </form>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Link Filter Extension</strong> by
+          <a href="http://tosta.eti.br">jctosta</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a> and avaliable at
+          <a href="https://github.com/jctosta/link-filter-extension">github.com/jctosta/link-filter-extension</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="options.js"></script>
+</body>
+
+</html>

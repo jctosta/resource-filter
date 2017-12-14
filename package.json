@@ -1,0 +1,20 @@
+{
+  "name": "resource-filter",
+  "version": "0.1.0",
+  "description": "Filter page resources (links, images, video...) and copy then to clipboard.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "web-extensions",
+    "firefox",
+    "chrome"
+  ],
+  "author": "Carlos Tosta <jctosta86@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^4.11.0"
+  }
+}

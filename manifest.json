@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Resource Filter",
+  "version": "0.1",
+  "icons": {
+    "48": "icons/48.png"
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "clipboardWrite"
+  ],
+  "description": "",
+  "browser_action": {
+    "default_icon": "icons/filter-38.png",
+    "default_title": "Filter Page Resources"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true,
+    "open_in_tab": true
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [ "./filter.js" ]
+    }
+  ]
+}
